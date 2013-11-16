@@ -18,9 +18,12 @@
 		9B4B3C3218379CDE00F75D25 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B3C3118379CDE00F75D25 /* Default-568h@2x.png */; };
 		9B4B3C3518379CDE00F75D25 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B3C3318379CDE00F75D25 /* MainStoryboard.storyboard */; };
 		9B4B3C3818379CDE00F75D25 /* TPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3C3718379CDE00F75D25 /* TPSViewController.m */; };
+		9B4B3C3F18379CF900F75D25 /* WordList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B3C3E18379CF900F75D25 /* WordList.plist */; };
+		9B4B3C4218379DEC00F75D25 /* TPSWordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3C4118379DEC00F75D25 /* TPSWordListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B32591D18CC13F1007250E6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		9B4B3C1818379CDE00F75D25 /* WordsWithoutFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsWithoutFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4B3C1B18379CDE00F75D25 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9B4B3C1D18379CDE00F75D25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +40,9 @@
 		9B4B3C3418379CDE00F75D25 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9B4B3C3618379CDE00F75D25 /* TPSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPSViewController.h; sourceTree = "<group>"; };
 		9B4B3C3718379CDE00F75D25 /* TPSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPSViewController.m; sourceTree = "<group>"; };
+		9B4B3C3E18379CF900F75D25 /* WordList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WordList.plist; sourceTree = "<group>"; };
+		9B4B3C4018379DEC00F75D25 /* TPSWordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSWordListViewController.h; sourceTree = "<group>"; };
+		9B4B3C4118379DEC00F75D25 /* TPSWordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSWordListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 				9B4B3C2118379CDE00F75D25 /* WordsWithoutFriends */,
 				9B4B3C1A18379CDE00F75D25 /* Frameworks */,
 				9B4B3C1918379CDE00F75D25 /* Products */,
+				9B32591D18CC13F1007250E6 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,9 +92,12 @@
 			children = (
 				9B4B3C2A18379CDE00F75D25 /* TPSAppDelegate.h */,
 				9B4B3C2B18379CDE00F75D25 /* TPSAppDelegate.m */,
-				9B4B3C3318379CDE00F75D25 /* MainStoryboard.storyboard */,
+				9B4B3C4018379DEC00F75D25 /* TPSWordListViewController.h */,
+				9B4B3C4118379DEC00F75D25 /* TPSWordListViewController.m */,
 				9B4B3C3618379CDE00F75D25 /* TPSViewController.h */,
 				9B4B3C3718379CDE00F75D25 /* TPSViewController.m */,
+				9B4B3C3318379CDE00F75D25 /* MainStoryboard.storyboard */,
+				9B4B3C3E18379CF900F75D25 /* WordList.plist */,
 				9B4B3C2218379CDE00F75D25 /* Supporting Files */,
 			);
 			path = WordsWithoutFriends;
@@ -164,6 +174,7 @@
 				9B4B3C3018379CDE00F75D25 /* Default@2x.png in Resources */,
 				9B4B3C3218379CDE00F75D25 /* Default-568h@2x.png in Resources */,
 				9B4B3C3518379CDE00F75D25 /* MainStoryboard.storyboard in Resources */,
+				9B4B3C3F18379CF900F75D25 /* WordList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +188,7 @@
 				9B4B3C2818379CDE00F75D25 /* main.m in Sources */,
 				9B4B3C2C18379CDE00F75D25 /* TPSAppDelegate.m in Sources */,
 				9B4B3C3818379CDE00F75D25 /* TPSViewController.m in Sources */,
+				9B4B3C4218379DEC00F75D25 /* TPSWordListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

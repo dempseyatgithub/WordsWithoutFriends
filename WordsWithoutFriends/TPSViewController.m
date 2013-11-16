@@ -10,20 +10,19 @@
 
 @interface TPSViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *wordLabel;
+@property (weak, nonatomic) IBOutlet UILabel *partOfSpeechLabel;
+
 @end
 
 @implementation TPSViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
+    
+    self.wordLabel.text = self.wordRecord[@"word"];
+    self.partOfSpeechLabel.text = self.wordRecord[@"partOfSpeech"];
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
