@@ -15,6 +15,11 @@
 
 @implementation TPSWordListViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self updateRowHeight];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentSizeChanged:) name:UIContentSizeCategoryDidChangeNotification object:[UIApplication sharedApplication]];
@@ -26,9 +31,36 @@
 }
 
 - (void)contentSizeChanged:(NSNotification *)note {
+    [self updateRowHeight];
     [self.tableView reloadData];
+    
 }
 
+- (void)updateRowHeight {
+    NSString *contentSizeCategory = [[UIApplication sharedApplication] preferredContentSizeCategory];
+    NSInteger rowHeight = [self rowHeightForContentSizeCategory:contentSizeCategory];
+    self.tableView.rowHeight = rowHeight;
+}
+
+- (NSInteger)rowHeightForContentSizeCategory:(NSString *)contentSizeCategory {
+    static NSDictionary *heightsByCategory;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        heightsByCategory = @{UIContentSizeCategoryExtraSmall: @(44),
+                              UIContentSizeCategorySmall: @(44),
+                              UIContentSizeCategoryMedium: @(44),
+                              UIContentSizeCategoryLarge: @(44),
+                              UIContentSizeCategoryExtraLarge: @(52),
+                              UIContentSizeCategoryExtraExtraLarge: @(56),
+                              UIContentSizeCategoryExtraExtraExtraLarge: @(60)
+                              };
+    });
+
+    NSNumber *number = heightsByCategory[contentSizeCategory];
+    if (!number) number = @(60);
+
+    return [number integerValue];
+}
 
 #pragma mark - Table view data source
 
