@@ -8,6 +8,7 @@
 
 #import "TPSWordListViewController.h"
 #import "TPSViewController.h"
+#import "TPSSelectedBackgroundView.h"
 
 @interface TPSWordListViewController ()
 
@@ -35,11 +36,19 @@
     if (self.transitionCoordinator && self.transitionCoordinator.initiallyInteractive && !self.isBeingPresented && !self.isMovingToParentViewController) {
         
         [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
-            cell.selectedBackgroundView.alpha = 0.0;
+            
+            // Change the alpha of the color view only
+            TPSSelectedBackgroundView *backgroundView = (TPSSelectedBackgroundView *)cell.selectedBackgroundView;
+            backgroundView.colorView.alpha = 0.0;
             
         } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
             if (!context.isCancelled) {
                 [tableView deselectRowAtIndexPath:indexPath animated:NO];
+                
+                // Set alpha back for next use
+                TPSSelectedBackgroundView *backgroundView = (TPSSelectedBackgroundView *)cell.selectedBackgroundView;
+                backgroundView.colorView.alpha = 1.0;
+
             }
         }];
         
@@ -101,6 +110,15 @@
     static NSString *CellIdentifier = @"WordCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    // Use custom selected background view
+    if (![cell.selectedBackgroundView isKindOfClass:[TPSSelectedBackgroundView class]]) {
+
+        TPSSelectedBackgroundView *backgroundView = [[TPSSelectedBackgroundView alloc] init];
+        backgroundView.colorView.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0];
+        backgroundView.separatorColor = self.tableView.separatorColor;
+        cell.selectedBackgroundView = backgroundView;
+    }
+
     NSDictionary *wordRecord = [self.words objectAtIndex:indexPath.row];
     
     cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
