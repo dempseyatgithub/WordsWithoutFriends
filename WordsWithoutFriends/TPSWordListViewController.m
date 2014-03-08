@@ -18,6 +18,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateRowHeight];
+
+    // We don't want the default deselection animation
+    self.clearsSelectionOnViewWillAppear = NO;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    UITableView *tableView = self.tableView;
+    
+    // In this case, I am appearing, but am already in a parent view controller
+    if (self.transitionCoordinator && self.transitionCoordinator.initiallyInteractive && !self.isBeingPresented && !self.isMovingToParentViewController) {
+        
+        [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+            cell.selectedBackgroundView.alpha = 0.0;
+            
+        } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+            if (!context.isCancelled) {
+                [tableView deselectRowAtIndexPath:indexPath animated:NO];
+            }
+        }];
+        
+    } else {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
