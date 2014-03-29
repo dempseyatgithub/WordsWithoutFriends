@@ -42,8 +42,10 @@
                 
             } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
                 if (context.isCancelled) {
-                    [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+                    // Reverse the cell selection process
+                    [cell setSelected:YES animated:NO];
                 } else {
+                    // Tell the table about the selection
                     [tableView deselectRowAtIndexPath:indexPath animated:NO];
                 }
             }];
