@@ -8,7 +8,6 @@
 
 #import "TPSWordListViewController.h"
 #import "TPSViewController.h"
-#import "TPSSelectedBackgroundView.h"
 
 @interface TPSWordListViewController ()
 
@@ -28,32 +27,32 @@
     
     [super viewWillAppear:animated];
     
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     UITableView *tableView = self.tableView;
+    NSIndexPath *indexPath = [tableView indexPathForSelectedRow];
     
-    // In this case, I am appearing, but am already in a parent view controller
-    if (self.transitionCoordinator && self.transitionCoordinator.initiallyInteractive && !self.isBeingPresented && !self.isMovingToParentViewController) {
+    if (indexPath) {
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
-        [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        // In this case, I am appearing, but am already in a parent view controller
+        if (self.transitionCoordinator && self.transitionCoordinator.initiallyInteractive && !self.isBeingPresented && !self.isMovingToParentViewController) {
             
-            // Change the alpha of the color view only
-            TPSSelectedBackgroundView *backgroundView = (TPSSelectedBackgroundView *)cell.selectedBackgroundView;
-            backgroundView.colorView.alpha = 0.0;
-            
-        } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
-            if (!context.isCancelled) {
-                [tableView deselectRowAtIndexPath:indexPath animated:NO];
+            [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
                 
-                // Set alpha back for next use
-                TPSSelectedBackgroundView *backgroundView = (TPSSelectedBackgroundView *)cell.selectedBackgroundView;
-                backgroundView.colorView.alpha = 1.0;
-
-            }
-        }];
-        
-    } else {
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+                [cell setSelected:NO animated:YES];
+                
+            } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+                if (context.isCancelled) {
+                    // Reverse the cell selection process
+                    [cell setSelected:YES animated:NO];
+                } else {
+                    // Tell the table about the selection
+                    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+                }
+            }];
+            
+        } else {
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        }
     }
 }
 
@@ -110,15 +109,6 @@
     static NSString *CellIdentifier = @"WordCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Use custom selected background view
-    if (![cell.selectedBackgroundView isKindOfClass:[TPSSelectedBackgroundView class]]) {
-
-        TPSSelectedBackgroundView *backgroundView = [[TPSSelectedBackgroundView alloc] init];
-        backgroundView.colorView.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0];
-        backgroundView.separatorColor = self.tableView.separatorColor;
-        cell.selectedBackgroundView = backgroundView;
-    }
-
     NSDictionary *wordRecord = [self.words objectAtIndex:indexPath.row];
     
     cell.textLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];

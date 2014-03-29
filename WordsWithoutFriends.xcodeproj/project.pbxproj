@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B32591C18CBCC67007250E6 /* TPSSelectedBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B32591B18CBCC67007250E6 /* TPSSelectedBackgroundView.m */; };
 		9B4B3C1C18379CDE00F75D25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4B3C1B18379CDE00F75D25 /* UIKit.framework */; };
 		9B4B3C1E18379CDE00F75D25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4B3C1D18379CDE00F75D25 /* Foundation.framework */; };
 		9B4B3C2018379CDE00F75D25 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4B3C1F18379CDE00F75D25 /* CoreGraphics.framework */; };
@@ -24,8 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9B32591A18CBCC67007250E6 /* TPSSelectedBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSSelectedBackgroundView.h; sourceTree = "<group>"; };
-		9B32591B18CBCC67007250E6 /* TPSSelectedBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSSelectedBackgroundView.m; sourceTree = "<group>"; };
 		9B32591D18CC13F1007250E6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		9B4B3C1818379CDE00F75D25 /* WordsWithoutFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsWithoutFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4B3C1B18379CDE00F75D25 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -97,8 +94,6 @@
 				9B4B3C2B18379CDE00F75D25 /* TPSAppDelegate.m */,
 				9B4B3C4018379DEC00F75D25 /* TPSWordListViewController.h */,
 				9B4B3C4118379DEC00F75D25 /* TPSWordListViewController.m */,
-				9B32591A18CBCC67007250E6 /* TPSSelectedBackgroundView.h */,
-				9B32591B18CBCC67007250E6 /* TPSSelectedBackgroundView.m */,
 				9B4B3C3618379CDE00F75D25 /* TPSViewController.h */,
 				9B4B3C3718379CDE00F75D25 /* TPSViewController.m */,
 				9B4B3C3318379CDE00F75D25 /* MainStoryboard.storyboard */,
@@ -193,7 +188,6 @@
 				9B4B3C2818379CDE00F75D25 /* main.m in Sources */,
 				9B4B3C2C18379CDE00F75D25 /* TPSAppDelegate.m in Sources */,
 				9B4B3C3818379CDE00F75D25 /* TPSViewController.m in Sources */,
-				9B32591C18CBCC67007250E6 /* TPSSelectedBackgroundView.m in Sources */,
 				9B4B3C4218379DEC00F75D25 /* TPSWordListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
