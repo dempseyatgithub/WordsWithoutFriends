@@ -14,8 +14,9 @@ The major changes are:
 * Updating row height when user changes Dynamic Type size
 * Updating selection color of table cell labels to not be white
 * Adding an animate-alongside animation to the standard interactive transition
-* Adding a custom selected background view to the table view cell
 
 To test the Dynamic Type support, leave the app and go to Settings > General > Text Size and adjust the text size to see how the table view changes.
 
 To test the animate-alongside animation, tap a word in the table view to drill into the detail page.  Then swipe from the left edge, to interactively navigate back to the table view.
+
+Note that a previous version of this project used a custom selected background view to acheive an animation effect.  The project now uses a cleaner technique that does not require a custom selected background view.
