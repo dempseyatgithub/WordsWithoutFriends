@@ -113,7 +113,7 @@
     // Use custom selected background view
     if (![cell.selectedBackgroundView isKindOfClass:[TPSSelectedBackgroundView class]]) {
 
-        TPSSelectedBackgroundView *backgroundView = [[TPSSelectedBackgroundView alloc] init];
+        TPSSelectedBackgroundView *backgroundView = [[TPSSelectedBackgroundView alloc] initWithFrame:cell.bounds];
         backgroundView.colorView.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0];
         backgroundView.separatorColor = self.tableView.separatorColor;
         cell.selectedBackgroundView = backgroundView;
