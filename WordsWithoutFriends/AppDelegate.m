@@ -1,15 +1,15 @@
 //
-//  TPSAppDelegate.m
+//  AppDelegate.m
 //  WordsWithoutFriends
 //
 //  Created by Presenter on 11/16/13.
 //  Copyright (c) 2013 Tapas Software. All rights reserved.
 //
 
-#import "TPSAppDelegate.h"
-#import "TPSWordListViewController.h"
+#import "AppDelegate.h"
+#import "WordListViewController.h"
 
-@implementation TPSAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -20,7 +20,7 @@
     
     UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
     
-    TPSWordListViewController *viewController = (TPSWordListViewController *)navController.topViewController;
+    WordListViewController *viewController = (WordListViewController *)navController.topViewController;
     
     viewController.words = wordList;
     

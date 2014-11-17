@@ -1,5 +1,5 @@
 //
-//  TPSWordListViewController.h
+//  WordDetailViewController.h
 //  WordsWithoutFriends
 //
 //  Created by Presenter on 11/16/13.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TPSWordListViewController : UITableViewController
-
-@property (nonatomic, strong) NSArray *words;
-
+@interface WordDetailViewController : UIViewController
+@property (nonatomic, strong) NSDictionary *wordRecord;
 @end

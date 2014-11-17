@@ -1,5 +1,5 @@
 //
-//  TPSViewController.h
+//  AppDelegate.h
 //  WordsWithoutFriends
 //
 //  Created by Presenter on 11/16/13.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TPSViewController : UIViewController
-@property (nonatomic, strong) NSDictionary *wordRecord;
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
 @end

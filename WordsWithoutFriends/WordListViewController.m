@@ -1,19 +1,19 @@
 //
-//  TPSWordListViewController.m
+//  WordListViewController.m
 //  WordsWithoutFriends
 //
 //  Created by Presenter on 11/16/13.
 //  Copyright (c) 2013 Tapas Software. All rights reserved.
 //
 
-#import "TPSWordListViewController.h"
-#import "TPSViewController.h"
+#import "WordListViewController.h"
+#import "WordDetailViewController.h"
 
-@interface TPSWordListViewController ()
+@interface WordListViewController ()
 
 @end
 
-@implementation TPSWordListViewController
+@implementation WordListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -126,7 +126,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     NSDictionary *wordRecord = [self.words objectAtIndex:indexPath.row];
     
-    TPSViewController *vc = segue.destinationViewController;
+    WordDetailViewController *vc = segue.destinationViewController;
     vc.wordRecord = wordRecord;
 }
 

@@ -12,14 +12,14 @@
 		9B4B3C2018379CDE00F75D25 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4B3C1F18379CDE00F75D25 /* CoreGraphics.framework */; };
 		9B4B3C2618379CDE00F75D25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B3C2418379CDE00F75D25 /* InfoPlist.strings */; };
 		9B4B3C2818379CDE00F75D25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3C2718379CDE00F75D25 /* main.m */; };
-		9B4B3C2C18379CDE00F75D25 /* TPSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3C2B18379CDE00F75D25 /* TPSAppDelegate.m */; };
+		9B4B3C2C18379CDE00F75D25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3C2B18379CDE00F75D25 /* AppDelegate.m */; };
 		9B4B3C2E18379CDE00F75D25 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B3C2D18379CDE00F75D25 /* Default.png */; };
 		9B4B3C3018379CDE00F75D25 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B3C2F18379CDE00F75D25 /* Default@2x.png */; };
 		9B4B3C3218379CDE00F75D25 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B3C3118379CDE00F75D25 /* Default-568h@2x.png */; };
 		9B4B3C3518379CDE00F75D25 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B3C3318379CDE00F75D25 /* MainStoryboard.storyboard */; };
-		9B4B3C3818379CDE00F75D25 /* TPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3C3718379CDE00F75D25 /* TPSViewController.m */; };
+		9B4B3C3818379CDE00F75D25 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3C3718379CDE00F75D25 /* WordDetailViewController.m */; };
 		9B4B3C3F18379CF900F75D25 /* WordList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B3C3E18379CF900F75D25 /* WordList.plist */; };
-		9B4B3C4218379DEC00F75D25 /* TPSWordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3C4118379DEC00F75D25 /* TPSWordListViewController.m */; };
+		9B4B3C4218379DEC00F75D25 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3C4118379DEC00F75D25 /* WordListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,17 +32,17 @@
 		9B4B3C2518379CDE00F75D25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9B4B3C2718379CDE00F75D25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9B4B3C2918379CDE00F75D25 /* WordsWithoutFriends-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WordsWithoutFriends-Prefix.pch"; sourceTree = "<group>"; };
-		9B4B3C2A18379CDE00F75D25 /* TPSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPSAppDelegate.h; sourceTree = "<group>"; };
-		9B4B3C2B18379CDE00F75D25 /* TPSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPSAppDelegate.m; sourceTree = "<group>"; };
+		9B4B3C2A18379CDE00F75D25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9B4B3C2B18379CDE00F75D25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9B4B3C2D18379CDE00F75D25 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9B4B3C2F18379CDE00F75D25 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9B4B3C3118379CDE00F75D25 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9B4B3C3418379CDE00F75D25 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9B4B3C3618379CDE00F75D25 /* TPSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPSViewController.h; sourceTree = "<group>"; };
-		9B4B3C3718379CDE00F75D25 /* TPSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPSViewController.m; sourceTree = "<group>"; };
+		9B4B3C3618379CDE00F75D25 /* WordDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordDetailViewController.h; sourceTree = "<group>"; };
+		9B4B3C3718379CDE00F75D25 /* WordDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewController.m; sourceTree = "<group>"; };
 		9B4B3C3E18379CF900F75D25 /* WordList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WordList.plist; sourceTree = "<group>"; };
-		9B4B3C4018379DEC00F75D25 /* TPSWordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSWordListViewController.h; sourceTree = "<group>"; };
-		9B4B3C4118379DEC00F75D25 /* TPSWordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSWordListViewController.m; sourceTree = "<group>"; };
+		9B4B3C4018379DEC00F75D25 /* WordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController.h; sourceTree = "<group>"; };
+		9B4B3C4118379DEC00F75D25 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +90,12 @@
 		9B4B3C2118379CDE00F75D25 /* WordsWithoutFriends */ = {
 			isa = PBXGroup;
 			children = (
-				9B4B3C2A18379CDE00F75D25 /* TPSAppDelegate.h */,
-				9B4B3C2B18379CDE00F75D25 /* TPSAppDelegate.m */,
-				9B4B3C4018379DEC00F75D25 /* TPSWordListViewController.h */,
-				9B4B3C4118379DEC00F75D25 /* TPSWordListViewController.m */,
-				9B4B3C3618379CDE00F75D25 /* TPSViewController.h */,
-				9B4B3C3718379CDE00F75D25 /* TPSViewController.m */,
+				9B4B3C2A18379CDE00F75D25 /* AppDelegate.h */,
+				9B4B3C2B18379CDE00F75D25 /* AppDelegate.m */,
+				9B4B3C4018379DEC00F75D25 /* WordListViewController.h */,
+				9B4B3C4118379DEC00F75D25 /* WordListViewController.m */,
+				9B4B3C3618379CDE00F75D25 /* WordDetailViewController.h */,
+				9B4B3C3718379CDE00F75D25 /* WordDetailViewController.m */,
 				9B4B3C3318379CDE00F75D25 /* MainStoryboard.storyboard */,
 				9B4B3C3E18379CF900F75D25 /* WordList.plist */,
 				9B4B3C2218379CDE00F75D25 /* Supporting Files */,
@@ -143,7 +143,7 @@
 		9B4B3C1018379CDE00F75D25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = TPS;
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Tapas Software";
 			};
@@ -186,9 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B4B3C2818379CDE00F75D25 /* main.m in Sources */,
-				9B4B3C2C18379CDE00F75D25 /* TPSAppDelegate.m in Sources */,
-				9B4B3C3818379CDE00F75D25 /* TPSViewController.m in Sources */,
-				9B4B3C4218379DEC00F75D25 /* TPSWordListViewController.m in Sources */,
+				9B4B3C2C18379CDE00F75D25 /* AppDelegate.m in Sources */,
+				9B4B3C3818379CDE00F75D25 /* WordDetailViewController.m in Sources */,
+				9B4B3C4218379DEC00F75D25 /* WordListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

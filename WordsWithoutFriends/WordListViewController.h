@@ -1,5 +1,5 @@
 //
-//  TPSAppDelegate.h
+//  WordListViewController.h
 //  WordsWithoutFriends
 //
 //  Created by Presenter on 11/16/13.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TPSAppDelegate : UIResponder <UIApplicationDelegate>
+@interface WordListViewController : UITableViewController
 
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) NSArray *words;
 
 @end
