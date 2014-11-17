@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "WordListViewController.h"
 
 @implementation AppDelegate
 
@@ -18,11 +17,11 @@
     NSArray *wordList = [NSArray arrayWithContentsOfURL:plistURL];
     wordList = [wordList sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"word" ascending:YES]]];
     
-    UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
-    
-    WordListViewController *viewController = (WordListViewController *)navController.topViewController;
-    
-    viewController.words = wordList;
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    for (UINavigationController *navController in tabBarController.viewControllers) {
+        UIViewController *viewController = navController.topViewController;
+        [viewController setValue:[wordList copy] forKey:@"words"];
+    }
     
     return YES;
 }

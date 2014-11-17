@@ -19,7 +19,10 @@
 		9B4B3C3518379CDE00F75D25 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B3C3318379CDE00F75D25 /* MainStoryboard.storyboard */; };
 		9B4B3C3818379CDE00F75D25 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3C3718379CDE00F75D25 /* WordDetailViewController.m */; };
 		9B4B3C3F18379CF900F75D25 /* WordList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B4B3C3E18379CF900F75D25 /* WordList.plist */; };
-		9B4B3C4218379DEC00F75D25 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3C4118379DEC00F75D25 /* WordListViewController.m */; };
+		9B4B3C4218379DEC00F75D25 /* WordListViewController_BasicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4B3C4118379DEC00F75D25 /* WordListViewController_BasicCell.m */; };
+		9BCB59931A1AA48800B83365 /* WordListViewController_CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB59901A1AA48800B83365 /* WordListViewController_CustomCell.m */; };
+		9BCB59971A1AA4EB00B83365 /* WordListViewController_CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB59961A1AA4EB00B83365 /* WordListViewController_CustomFont.m */; };
+		9BCB599B1A1ABCB200B83365 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BCB599A1A1ABCB200B83365 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +44,13 @@
 		9B4B3C3618379CDE00F75D25 /* WordDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordDetailViewController.h; sourceTree = "<group>"; };
 		9B4B3C3718379CDE00F75D25 /* WordDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WordDetailViewController.m; sourceTree = "<group>"; };
 		9B4B3C3E18379CF900F75D25 /* WordList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WordList.plist; sourceTree = "<group>"; };
-		9B4B3C4018379DEC00F75D25 /* WordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController.h; sourceTree = "<group>"; };
-		9B4B3C4118379DEC00F75D25 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
+		9B4B3C4018379DEC00F75D25 /* WordListViewController_BasicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController_BasicCell.h; sourceTree = "<group>"; };
+		9B4B3C4118379DEC00F75D25 /* WordListViewController_BasicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController_BasicCell.m; sourceTree = "<group>"; };
+		9BCB598F1A1AA48800B83365 /* WordListViewController_CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController_CustomCell.h; sourceTree = "<group>"; };
+		9BCB59901A1AA48800B83365 /* WordListViewController_CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController_CustomCell.m; sourceTree = "<group>"; };
+		9BCB59951A1AA4EB00B83365 /* WordListViewController_CustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListViewController_CustomFont.h; sourceTree = "<group>"; };
+		9BCB59961A1AA4EB00B83365 /* WordListViewController_CustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController_CustomFont.m; sourceTree = "<group>"; };
+		9BCB599A1A1ABCB200B83365 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				9B4B3C2118379CDE00F75D25 /* WordsWithoutFriends */,
-				9B4B3C1A18379CDE00F75D25 /* Frameworks */,
 				9B4B3C1918379CDE00F75D25 /* Products */,
 				9B32591D18CC13F1007250E6 /* README.md */,
 			);
@@ -85,6 +92,7 @@
 				9B4B3C1F18379CDE00F75D25 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9B4B3C2118379CDE00F75D25 /* WordsWithoutFriends */ = {
@@ -92,12 +100,18 @@
 			children = (
 				9B4B3C2A18379CDE00F75D25 /* AppDelegate.h */,
 				9B4B3C2B18379CDE00F75D25 /* AppDelegate.m */,
-				9B4B3C4018379DEC00F75D25 /* WordListViewController.h */,
-				9B4B3C4118379DEC00F75D25 /* WordListViewController.m */,
+				9B4B3C4018379DEC00F75D25 /* WordListViewController_BasicCell.h */,
+				9B4B3C4118379DEC00F75D25 /* WordListViewController_BasicCell.m */,
+				9BCB598F1A1AA48800B83365 /* WordListViewController_CustomCell.h */,
+				9BCB59901A1AA48800B83365 /* WordListViewController_CustomCell.m */,
+				9BCB59951A1AA4EB00B83365 /* WordListViewController_CustomFont.h */,
+				9BCB59961A1AA4EB00B83365 /* WordListViewController_CustomFont.m */,
 				9B4B3C3618379CDE00F75D25 /* WordDetailViewController.h */,
 				9B4B3C3718379CDE00F75D25 /* WordDetailViewController.m */,
 				9B4B3C3318379CDE00F75D25 /* MainStoryboard.storyboard */,
+				9BCB599A1A1ABCB200B83365 /* Images.xcassets */,
 				9B4B3C3E18379CF900F75D25 /* WordList.plist */,
+				9B4B3C1A18379CDE00F75D25 /* Frameworks */,
 				9B4B3C2218379CDE00F75D25 /* Supporting Files */,
 			);
 			path = WordsWithoutFriends;
@@ -171,6 +185,7 @@
 			files = (
 				9B4B3C2618379CDE00F75D25 /* InfoPlist.strings in Resources */,
 				9B4B3C2E18379CDE00F75D25 /* Default.png in Resources */,
+				9BCB599B1A1ABCB200B83365 /* Images.xcassets in Resources */,
 				9B4B3C3018379CDE00F75D25 /* Default@2x.png in Resources */,
 				9B4B3C3218379CDE00F75D25 /* Default-568h@2x.png in Resources */,
 				9B4B3C3518379CDE00F75D25 /* MainStoryboard.storyboard in Resources */,
@@ -187,8 +202,10 @@
 			files = (
 				9B4B3C2818379CDE00F75D25 /* main.m in Sources */,
 				9B4B3C2C18379CDE00F75D25 /* AppDelegate.m in Sources */,
+				9BCB59971A1AA4EB00B83365 /* WordListViewController_CustomFont.m in Sources */,
+				9BCB59931A1AA48800B83365 /* WordListViewController_CustomCell.m in Sources */,
 				9B4B3C3818379CDE00F75D25 /* WordDetailViewController.m in Sources */,
-				9B4B3C4218379DEC00F75D25 /* WordListViewController.m in Sources */,
+				9B4B3C4218379DEC00F75D25 /* WordListViewController_BasicCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
